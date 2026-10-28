@@ -3,38 +3,39 @@
 
 using namespace std;
 
-// 1. CLASS (SINIF) OLUŞTURMA: Kendi veri tipimizi (şablonumuzu) yaratıyoruz.
-// Bunu boş bir "Kek Kalıbı" veya "Karakter Yaratma Ekranı" gibi düşünebilirsin.
-class OyunKarakteri {
-  public: // public: Bu şablonun içindekilere dışarıdan (main içinden) doğrudan erişilebilir demek.
+// 1. SINIF (CLASS) TANIMLAMA
+// Sınıf bir fabrikadaki "üretim kalıbı" veya bir oyunun "karakter şablonu"dur.
+// Tek başına hiçbir şey yapmaz, sadece neleri barındıracağını söyler.
+class Futbolcu {
+public: // public: Şimdilik herkes bu özelliklere dışarıdan erişebilsin diyoruz.
     
-    // Karakterin özellikleri (Değişkenler)
+    // Özellikler (Değişkenler)
     string isim;
-    int seviye;
-
-    // Karakterin yapabileceği bir eylem (Buna OOP'de Metot / Fonksiyon denir)
-    void saldir() {
-        cout << isim << " baltasini savurdu!" << endl;
-    }
+    string mevki;
+    int kondisyon;
 };
 
 int main() {
-    cout << "--- OOP'ye Basit Bir Giris ---\n\n";
+    cout << "--- Lesson 1: Sinif ve Nesne Tanimlama ---\n\n";
 
-    // 2. OBJECT (NESNE) ÜRETME: Şablondan gerçek ve canlı bir karakter çıkarıyoruz.
-    // Kek kalıbından gerçek bir kek yapmak gibi.
-    OyunKarakteri karakter1; 
-    
-    // 3. ÖZELLİKLERİ DOLDURMA: Araya nokta (.) koyarak karakterin özelliklerine ulaşıyoruz.
-    karakter1.isim = "Yorick";
-    karakter1.seviye = 5;
+    // 2. NESNE (OBJECT) ÜRETME
+    // Kalıbı kullanarak bellekte (RAM) gerçekten yer kaplayan nesneler yaratıyoruz.
+    Futbolcu oyuncu1;
+    Futbolcu oyuncu2;
+
+    // 3. ÖZELLİKLERE DEĞER ATAMA
+    // Nokta (.) operatörünü kullanarak nesnenin içindeki boşlukları dolduruyoruz.
+    oyuncu1.isim = "Dries Mertens";
+    oyuncu1.mevki = "On Numara";
+    oyuncu1.kondisyon = 75;
+
+    oyuncu2.isim = "Baris Alper Yilmaz";
+    oyuncu2.mevki = "Sag Acik";
+    oyuncu2.kondisyon = 99; // 4-3-3 Gegenpress sistemine uygun yuksek kondisyon!
 
     // 4. BİLGİLERİ EKRANA YAZDIRMA
-    cout << "Secilen Sampiyon: " << karakter1.isim << endl;
-    cout << "Seviyesi: " << karakter1.seviye << "\n" << endl;
-
-    // 5. METOT KULLANMA: Karakterin içindeki eylemi tetikliyoruz.
-    karakter1.saldir();
+    cout << "1. Oyuncu: " << oyuncu1.isim << " | Mevki: " << oyuncu1.mevki << " | Kondisyon: " << oyuncu1.kondisyon << endl;
+    cout << "2. Oyuncu: " << oyuncu2.isim << " | Mevki: " << oyuncu2.mevki << " | Kondisyon: " << oyuncu2.kondisyon << endl;
 
     return 0;
 }
