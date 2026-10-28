@@ -27,7 +27,7 @@ int main() {
     cout << "--- Lesson 2: Siniflara Method Ekleme ve Kullanma ---\n\n";
 
     Futbolcu oyuncu1;
-    oyuncu1.isim = "Dries Mertens";
+    oyuncu1.isim = "Batrakov";
     oyuncu1.kondisyon = 75;
 
     cout << "Baslangic Kondisyonu: " << oyuncu1.kondisyon << "\n" << endl;
@@ -37,7 +37,7 @@ int main() {
     oyuncu1.antrenmanYap(); 
     
     // Parametre isteyen metoda parantez içinde değer gönderiyoruz.
-    oyuncu1.pasVer("Mauro Icardi"); 
+    oyuncu1.pasVer("Osimhen"); 
 
     return 0;
 }

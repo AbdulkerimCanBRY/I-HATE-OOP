@@ -25,7 +25,7 @@ int main() {
 
     // 3. ÖZELLİKLERE DEĞER ATAMA
     // Nokta (.) operatörünü kullanarak nesnenin içindeki boşlukları dolduruyoruz.
-    oyuncu1.isim = "Dries Mertens";
+    oyuncu1.isim = "Batrakov";
     oyuncu1.mevki = "On Numara";
     oyuncu1.kondisyon = 75;
 
